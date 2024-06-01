@@ -1,5 +1,6 @@
 let User = require("../Models/userShema");
-let Note = require("../Models/notesSchema");
+// let Note = require("../Models/notesSchema");
+let Products = require('../Models/productSchema')
 const asyncHandler = require("express-async-handler");
 const bcrypt = require("bcrypt");
 

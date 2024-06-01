@@ -10,7 +10,7 @@ const dotenv = require('dotenv')
 dotenv.config()
 let {connectDB} = require('./DB/connectDB')
 const userRoutes = require('./routes/userRoutes')
-const notesRoutes = require('./routes/notesRoutes')
+const productRoutes = require('./routes/notesRoutes')
 
 app.use(logger)
 
@@ -26,7 +26,7 @@ app.use('/' , require('./routes/root'))
 
 app.use(errorHandler)
 app.use('/users' , userRoutes)
-app.use('/notes' , notesRoutes)
+app.use('/products' , productRoutes)
 
 app.all('*' , (req,res)=>{
     if(req.accepts('html'))

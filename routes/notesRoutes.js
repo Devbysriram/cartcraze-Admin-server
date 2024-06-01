@@ -1,15 +1,17 @@
 const express = require('express')
 const router = express.Router()
 const path = require('path');
-const { getAllNotes, createNotes, deleteNotes, updateNotes } = require('../Controllers/notesController');
+const { getAllProductss, createProductss,updateProductss, deleteProductss } = require('../Controllers/productController');
 
 
 
 router.route('/')
-.get(getAllNotes)
-.post(createNotes)
-.patch(updateNotes)
-.delete(deleteNotes)
+.get(getAllProductss)
+.post(createProductss)
+
+router.route('/:id')
+.patch(updateProductss)
+.delete(deleteProductss )
 
 
 module.exports = router;
