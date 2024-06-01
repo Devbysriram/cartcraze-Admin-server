@@ -26,7 +26,7 @@ app.use('/' , require('./routes/root'))
 
 app.use(errorHandler)
 app.use('/users' , userRoutes)
-app.use('/users' , notesRoutes)
+app.use('/notes' , notesRoutes)
 
 app.all('*' , (req,res)=>{
     if(req.accepts('html'))
